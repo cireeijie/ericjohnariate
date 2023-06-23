@@ -1,0 +1,132 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    transition: all .3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    transition: all .3s ease-in-out;
+    z-index: 99999;
+}
+
+.navbar .logo img {
+    width: 70px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    background-color: #3C3C3C;
+    height: 3px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+.hide-line {
+    opacity: 0;
+}
+
+.rotate-line-45 {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.rotate-line-315 {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.navbar .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar .menu ul li {
+    list-style-type: none;
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #3C3C3C;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.navbar .menu ul .contact {
+    background: #3C3C3C;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar .menu ul .contact i {
+    margin-left: -14px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.navbar .menu ul .contact:hover > i {
+    margin-left: 0 !important;
+    opacity: 1 !important;
+}
+
+.sticky {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.show {
+    height: auto !important;
+    padding: 10px;
+    opacity: 1 !important;
+}
+
+
+@media all and (max-width: 992px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .burger-menu {
+        display: flex !important;
+    }
+
+    .nav-menu {
+        position: absolute;
+        z-index: -9999;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        right: 0;
+        top: 30px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,98 @@
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#about .about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about .column-1 {
+    flex: 1;
+}
+
+.about .column-1 h1 {
+    font-size: 40px;
+}
+
+.about .column-1 p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.about .column-1 .action-btns {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.about .column-1 .action-btns a {
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.about .column-1 .action-btns a i {
+    margin-left: -15px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.about .column-1 .action-btns .resume {
+    background-color: #3C3C3C;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.about .column-1 .action-btns .to-projects {
+    color: #3C3C3C;
+    border: 1px solid #3C3C3C;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.about .column-1 .action-btns .resume:hover > i,
+.about .column-1 .action-btns .to-projects:hover > i {
+    margin-left: 0 !important;
+    opacity: 1 !important;
+}
+
+.about .column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .column-2 img {
+    width: 300px;
+}
+
+#about .skills {
+    padding: 50px 0;
+}
+
+#about .skills .my-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media all and (max-width: 992px) {
+    #about .about {
+        flex-direction: column-reverse;
+    }
+
+    #about .skills .my-skills {
+        justify-content: center !important;
+        gap: 20px;
+    }
+}

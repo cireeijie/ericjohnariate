@@ -1,0 +1,100 @@
+#experiences {
+    padding: 50px 0;
+}
+
+#experiences .section-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.vertical-timeline-element-content {
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-timeline-element-content-arrow {
+    border-right: 7px solid #f9f9f9;
+}
+
+.exp-location {
+    font-weight: 400;
+}
+
+.course {
+    font-weight: 700 !important;
+}
+
+.achievements {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.achievements p {
+    font-size: 10px;
+    background-color: #818181;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.skill-experiences {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.skill-experiences i {
+    font-size: 22px;
+    color: #3c3c3c;
+}
+
+.skill-experiences img {
+    height: 22px;
+}
+
+.skill-experiences img .premier {
+    height: 24px;
+}
+
+.exp-action-btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.exp-action-btns a {
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.exp-action-btns a i {
+    opacity: 0;
+    margin-left: -13px;
+    transition: all .3s ease-in-out;
+}
+
+.exp-action-btns .primary-btn {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.exp-action-btns .secondary-btn {
+    border: 1px solid #3c3c3c;
+    color: #3c3c3c;
+    font-weight: 500;
+}
+
+.exp-action-btns .primary-btn:hover > i,
+.exp-action-btns .secondary-btn:hover > i {
+    opacity: 1 !important;
+    margin-left: 0 !important;
+}
