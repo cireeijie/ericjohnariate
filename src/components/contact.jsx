@@ -3,28 +3,48 @@ import {HiMail} from 'react-icons/hi'
 import {IoLocationSharp} from 'react-icons/io5'
 import logo from '../assets/images/ej-logo.png'
 import './css/contact.css'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const submitText = document.querySelector('.submit-text');
         const successText = document.querySelector('.success-text');
 
-        submitText.classList.toggle('invisible');
-        successText.classList.toggle('visible');
+        console.log(form)
+
+        emailjs.sendForm('service_5t3j5d9', 'template_x9ekexw', form.current, 'NZNYS99y8mYwja2dD')
+        .then((result) => {
+            if(result) {
+                submitText.classList.toggle('invisible');
+                successText.classList.toggle('visible');
+
+                const successBtn = setInterval(() => {
+                    submitText.classList.remove('invisible');
+                    successText.classList.remove('visible');
+                    clearInterval(successBtn);
+                }, 4000)
+            }
+        }, (error) => {
+            console.log(error.text);
+        });
     }
+
 
     return (
         <section id="contact" className="section-row">
             <div className="contact container">
                 <div className="column-1">
                     <h1>Work with me!</h1>
-                    <form className="contact-form" id="contactForm">
-                        <input type="text" id="firstName" className="firstname" placeholder="First Name"/>
-                        <input type="text" id="lastName" className="lastname" placeholder="Last Name"/>
-                        <input type="email" id="lastName" className="lastname" placeholder="Email"/>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder='Your message...'></textarea>
-                        <button className="submit-btn" id="submitBtn" onClick={handleSubmit}>
+                    <form ref={form} onSubmit={handleSubmit} className="contact-form" id="contactForm">
+                        <input type="text" name='first_name' id="firstName" className="firstname" placeholder="First Name" required/>
+                        <input type="text" name='last_name' id="lastName" className="lastname" placeholder="Last Name" required/>
+                        <input type="email" name='email' id="email" className="email" placeholder="Email" required/>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder='Your message...' required></textarea>
+                        <button type='submit' className="submit-btn" id="submitBtn" >
                             <span className='submit-text'>
                                 <p>Submit</p>
                                 <FaChevronRight />
