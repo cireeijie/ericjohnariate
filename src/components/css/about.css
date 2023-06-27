@@ -87,8 +87,13 @@
 }
 
 @media all and (max-width: 992px) {
+    #about {
+        height: auto !important;
+    }
+
     #about .about {
         flex-direction: column-reverse;
+        margin-top: 50px;
     }
 
     #about .skills .my-skills {
