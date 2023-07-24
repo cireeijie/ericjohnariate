@@ -21,8 +21,8 @@ const Projects = () => {
                 'Express.js',
                 'MongoDB'
             ],
-            liveLink: 'https://github.com/cireeijie/capstone-project',
-            repository: 'https://github.com/cireeijie/capstone-project'
+            liveLink: 'https://chat-app-client-l6af.onrender.com/',
+            repository: 'https://github.com/cireeijie/chat-app-client'
         },
         {
             id: 2,
