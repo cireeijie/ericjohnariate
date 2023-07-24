@@ -39,6 +39,12 @@ const skills = [
         name: 'MySQL',
         progress: 90,
         icon: 'fa-solid fa-database'
+    },
+    {
+        id: 7,
+        name: 'Laravel',
+        progress: 80,
+        icon: 'fa-brands fa-laravel'
     }
 ]
 

@@ -5,12 +5,27 @@ import install from '../assets/images/install.png'
 import rpsGame from '../assets/images/rps-game.png'
 import onlineLibrary from '../assets/images/online-library.png'
 import jsMiniPrograms from '../assets/images/js-mini-programs.png'
+import katalk from '../assets/images/katalk.png'
 import './css/projects.css'
 
 const Projects = () => {
     const webProjects = [
         {
             id: 1,
+            name: 'Chat App',
+            image: katalk,
+            desc: 'The Real-Time Chat App is a modern and interactive communication platform that enables users to connect and chat in real-time. This app is designed using cutting-edge technologies, including Vite and React for the frontend, Node.js for the server, and MongoDB for the database, providing a seamless and efficient chatting experience.',
+            stacks: [
+                'ReactJS',
+                'Node.js',
+                'Express.js',
+                'MongoDB'
+            ],
+            liveLink: 'https://github.com/cireeijie/capstone-project',
+            repository: 'https://github.com/cireeijie/capstone-project'
+        },
+        {
+            id: 2,
             name: 'BiteBuddy',
             image: bitebuddy,
             desc: 'An online reservation site where users can book/reserve tables on available restaurant with their prefered time and day.',
@@ -24,7 +39,7 @@ const Projects = () => {
             repository: 'https://github.com/cireeijie/capstone-project'
         },
         {
-            id: 2,
+            id: 3,
             name: 'Korean Delight Davao',
             image: kdd,
             desc: 'An E-commerce site where users can order online with their favorite korean food in order to satisfy their korean food cravings.',
@@ -38,7 +53,7 @@ const Projects = () => {
             repository: 'https://github.com/cireeijie/mini-project-2'
         },
         {
-            id: 3,
+            id: 4,
             name: 'InStall',
             image: install,
             desc: 'This project aims to give opportunity to small businesses to acquire slots on any events with the help of an event organizer. Also, to secure the event to be organized until end of the event.',
@@ -52,7 +67,7 @@ const Projects = () => {
             repository: 'https://github.com/cireeijie/mini-project-1'
         },
         {
-            id: 4,
+            id: 5,
             name: 'Rock, Paper, and Scissors',
             image: rpsGame,
             desc: 'The famous rock, paper, & scissor game created digitally. Players can chose their enemy with the different difficulty.',
@@ -65,7 +80,7 @@ const Projects = () => {
             repository: 'https://github.com/cireeijie/rock-paper-scissor'
         },
         {
-            id: 5,
+            id: 6,
             name: 'Online Library',
             image: onlineLibrary,
             desc: 'Welcome to our Online Library, the ultimate destination for book lovers and knowledge seekers. With our vast collection of digital books, you can explore a world of literature at your fingertips.',
@@ -79,7 +94,7 @@ const Projects = () => {
             repository: 'https://github.com/cireeijie/bootstrap-online-library'
         },
         {
-            id: 6,
+            id: 7,
             name: 'JavaScript Mini Programs',
             image: jsMiniPrograms,
             desc: "Discover the magic of JavaScript with our collection of interactive and engaging mini programs. Whether you're a beginner looking to learn the basics or an experienced developer seeking to sharpen your skills, our JavaScript Mini Programs are designed to make coding fun and accessible.",
